@@ -17,7 +17,7 @@ timestamp = int(time.time() * 1000)
 timestamp = str(timestamp)
 
 ncloud_accesskey = "ncloud_accesskey"
-ncloud_secretkey = "ncloud_accesskey"
+ncloud_secretkey = "ncloud_secretkey"
 
 method = "GET"
 space = " "
@@ -27,6 +27,8 @@ api_server = "https://ncloud.apigw.gov-ntruss.com"
 
 ServerImageName_list=['test1', 'test2', 'test3', 'test4' ]
 regionCode = 'KR'
+
+log_path = "/api/logs"
 
 serverImage_Number = []
 return_code = []
@@ -109,7 +111,7 @@ def delete_image():
 
 ###Delete Log Function 
 def return_status():
-	f =open(f'logs/{str_dt}_delete.log', 'w')
+	f =open(f'{log_path}/{str_dt}_delete.log', 'w')
 	for image, name, status in zip (serverImage_Number, ServerImageName_list, return_code):
 		f.write(f'{dt}   ServerImageName : {name}   Image_Instance_Number : {image}  Status : {status} \n')
 	
@@ -117,7 +119,7 @@ def return_status():
 
 ###Log Delete Function
 def log_delete():
-	path_target =  ('logs')
+	path_target =  log_path
 	days_elapsed = 30 #로그 30일 보관 
 	for f in os.listdir(path_target):
 		f = os.path.join(path_target, f)
