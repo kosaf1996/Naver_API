@@ -25,7 +25,7 @@ new_line = "\n"
 
 api_server = "https://ncloud.apigw.gov-ntruss.com"
 
-Instance_list=[인스턴스ID, 인스턴스ID, 인스턴스ID, 인스턴스ID] #동일한 서버 이미지 들어가면 에러 발생합니다. 
+Instance_list=[인스턴스ID, 인스턴스ID, 인스턴스ID, 인스턴스ID] #동일한 서버 인스턴스ID 들어가면 에러 발생합니다. 
 ServerImageName_list=['test1', 'test2', 'test3', 'test4' ]
 regionCode = 'KR'
 
