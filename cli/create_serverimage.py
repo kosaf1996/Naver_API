@@ -28,7 +28,6 @@ new_line = "\n"
 # API 서버 정보
 api_server = "https://ncloud.apigw.ntruss.com"
 
-#Server InstenceNo List 15058826
 Instance_list=[] #동일한 서버 이미지 들어가면 에러 발생합니다. 
 ServerImageName_list=[]
 regionCode = 'KR'
