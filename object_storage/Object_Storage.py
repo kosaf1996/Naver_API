@@ -44,7 +44,7 @@ def create_standardized_query_parameters(request_parameters):
 ###################################################################
 ###                   Storage Class                             ###
 ###################################################################
-class ObjectStorageSample:
+class ObjectStorage:
     #########################################
     ##            초기화 함수               ##
     #########################################
@@ -189,7 +189,8 @@ class ObjectStorageSample:
     ##              메인 함수               ##
     #########################################  
 if __name__ == '__main__':
-    storage = ObjectStorageSample()
+    storage = ObjectStorage()
     #storage.list_bucket()
     #storage.list_object('Bucket') #버킷명 
-    storage.delete_object('Bucket', 'testdir/test.txt') #버킷명 파일명 
+    storage.delete_object('gm-test', 'testdir/test/NCP.pdf') #버킷명 파일명 
+
